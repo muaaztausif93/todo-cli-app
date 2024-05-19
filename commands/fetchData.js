@@ -23,8 +23,8 @@ async function fetchData() {
       console.log('\n')
     });
   } catch (error) {
-    console.error('Error fetching TODO list:', error);
-    throw error;
+    console.error('Error fetching TODO list:', error.message);
+    throw new Error('Error fetching TODO list: ' + error.message);
   }
 }
 
